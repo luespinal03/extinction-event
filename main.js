@@ -11,54 +11,132 @@
 
 let crossout = document.querySelectorAll('#crossout-ol li');
 
-for (let i = 0; i < crossout.length; i++) {
-    crossout[i].addEventListener('click', function () {
-        console.log(crossout[i]);
-        //console.log(event.target);
+// for (let i = 0; i < crossout.length; i++) {
+//     crossout[i].addEventListener('click', function () {
+//         console.log(crossout[i]);
+//         //console.log(event.target);
 
-        // strikethrough(crossout[i]); 
-        if (crossout[i].style.textDecoration === "") {
-            crossout[i].style.textDecoration = "line-through"
+//         // strikethrough(crossout[i]); 
+//         if (crossout[i].style.textDecoration === "") {
+//             crossout[i].style.textDecoration = "line-through"
+//         } else {
+//             crossout[i].style.textDecoration = ""
+//         }
+
+//     })
+// }
+
+/*****************
+
+    STRETCH GOAL crossout
+
+******************/
+
+
+crossout.forEach(function(list){
+    list.addEventListener('click', function(){
+        if (list.style.textDecoration === "") {
+            list.style.textDecoration = "line-through"
         } else {
-            crossout[i].style.textDecoration = ""
+            list.style.textDecoration = ""
         }
-
     })
-}
+    })
+
+    /*****************
+
+    STRETCH GOAL crossout
+
+******************/
+
+
+
+
+
+
 
 
 let faded = document.querySelectorAll('#faded-ul li');
 
-for (let i = 0; i < faded.length; i++) {
-    faded[i].addEventListener('click', function () {
-        console.log(faded[i]);
+// for (let i = 0; i < faded.length; i++) {
+//     faded[i].addEventListener('click', function () {
+//         console.log(faded[i]);
 
-        if (faded[i].style.opacity === '') {
-            faded[i].style.opacity = '0.2'
-        } else {
-            faded[i].style.opacity = ''
-        }
-    })
-}
+//         if (faded[i].style.opacity === '') {
+//             faded[i].style.opacity = '0.2'
+//         } else {
+//             faded[i].style.opacity = ''
+//         }
+//     })
+// }
+
+
+/*****************
+
+    STRETCH GOAL faded
+
+******************/
+
+faded.forEach(function(list){
+list.addEventListener('click', function(){
+    if (list.style.opacity === '') {
+        list.style.opacity = '0'
+    } else {
+        list.style.opacity = ''
+    }
+})
+})
+
+/*****************
+
+    STRETCH GOAL faded
+
+******************/
+
+
+
 
 let row = document.querySelectorAll('#row img');
 
-for (let i = 0; i < row.length; i++) {
-    row[i].addEventListener('click', function () {
-        console.log(row[i]);
+// for (let i = 0; i < row.length; i++) {
+//     row[i].addEventListener('click', function () {
+//         console.log(row[i]);
 
-        row[i].style.width = '0px';
+//         row[i].style.width = '0px';
+//     })
+// }
+
+
+/*****************
+
+    STRETCH GOAL row
+
+******************/
+
+
+row.forEach(function(list){
+    list.addEventListener('click', function(){
+        console.log(list);
+
+        list.style.width = '0px';
     })
-}
+    })
+
+/*****************
+
+    STRETCH GOAL row
+
+******************/
+
+
+
 
 
 /*****************
 
     METEOR ME BUTTON
-    
+
 ******************/
-
-
 
 
 
